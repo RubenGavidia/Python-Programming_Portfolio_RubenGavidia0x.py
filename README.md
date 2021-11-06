@@ -1,6 +1,9 @@
 # Python-Programming_Portfolio_RubenGavidia0x.py
 Python-Programming_Portfolio_RubenGavidia0x.py
 
+![image](https://user-images.githubusercontent.com/35381213/140606509-50395f62-4a6e-4078-8ef0-930c28be162d.png)
+
+
 Functions:
 ```
 import random
