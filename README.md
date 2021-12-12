@@ -15,7 +15,18 @@ Exception Handling:
 
 Array Oriented Programming:
 
-List Comprehension:
+List Comprehension:'
+
+´´´
+>>> cubes = [ (x, x**3) for x in range(1,6)]
+>>> cubes
+[(1, 1), (2, 8), (3, 27), (4, 64), (5, 125)]
+
+list= [item for item in range(1,30) if item%3 == 0]
+>>> list
+[ 3, 6, 9, 12, 15, 18, 21, 24, 27]
+
+´´´
 
 Set Comprehension:
 
