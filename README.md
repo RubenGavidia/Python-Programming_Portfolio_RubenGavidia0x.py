@@ -13,9 +13,86 @@ Files:
 
 Exception Handling:
 
+Strings and Regular Expressions ( regex )
+
 Array Oriented Programming:
 
+```
+1 (IPython Session) Given the following 
+ dictionary;
 
+temps = {'Mon': [68, 89], 'Tue': 
+       [71, 93], 'Wed': [66, 82],
+       'Thu': [75, 97], 'Fri': [62, 79]}
+
+perform the following tasks:
+
+a) Convert the dictionary into 
+the DataFrame named temperatures 
+with 'Low' and 'High' as 
+the indices, then display 
+the DataFrame .
+
+tempsdf = pd.DataFrame(data = temps,index=['Low','High'])
+tempsdf
+
+Mon	Tue	Wed	Thu	Fri
+Low	68	71	66	75	62
+High	89	93	82	97	79
+
+b) Use the column names to 
+select only the columns 
+for 'Mon' through 'Wed' .
+
+# tempsdf.T.iloc[0:3] I am not use column names 
+tempsdf.T.loc['Mon':'Wed'].T 
+
+In [5]: temperatures.loc[:, 'Mon':'Wed'] # (b)
+Out[5]:
+Mon Tue Wed
+Low 68 71 66
+High 89 93 82
+
+c) Use the row index 'Low' 
+to select only the low 
+temperatures for each day.
+
+# tempsdf.iloc[0,:] 
+tempsdf.loc['Low',:]
+
+Mon    68
+Tue    71
+Wed    66
+Thu    75
+Fri    62
+Name: Low, dtype: int64
+
+d) Set the floating-point 
+precision to 2, then 
+calculate the average 
+temperature for
+each day.
+
+pd.set_option('precision', 2)
+tempsdf.mean()
+
+Mon    78.5
+Tue    82.0
+Wed    74.0
+Thu    86.0
+Fri    70.5
+dtype: float64
+
+
+e) Calculate the average low 
+ and high temperatures.
+
+tempsdf.mean(axis=1)
+Low     68.4
+High    88.0
+dtype: float64
+
+```
 
 List Comprehension:'
 
