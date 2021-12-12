@@ -15,23 +15,45 @@ Exception Handling:
 
 Array Oriented Programming:
 
+
+
 List Comprehension:'
 
-´´´
+```
 >>> cubes = [ (x, x**3) for x in range(1,6)]
 >>> cubes
 [(1, 1), (2, 8), (3, 27), (4, 64), (5, 125)]
 
-list= [item for item in range(1,30) if item%3 == 0]
->>> list
+multiples = [item for item in range(1,30) if item%3 == 0]
+>>> multiples
 [ 3, 6, 9, 12, 15, 18, 21, 24, 27]
 
-´´´
+```
+Generator Expresion:
+```
+list(x ** 3 for x in [10, 3, 7, 1, 9, 4, 2] if x % 2 == 0)
+[1000, 64, 8]
+
+```
 
 Set Comprehension:
 
-Dictionary Comprehension:
+```
+In [1]: numbers = [1, 2, 2, 3, 4, 5, 6, 6, 7, 8, 9, 10, 10]
+In [2]: evens = {item for item in numbers if item % 2 == 0}
+In [3]: evens
+Out[3]: {2, 4, 6, 8, 10}
+```
 
+Dictionary Comprehension:
+```
+grades = {'Sue': [98, 87, 94], 'Bob': [84, 95, 91]}
+grades2 = {k: sum(v) / len(v) for k, v in grades.items()}
+grades2
+{'Sue': 93.0, 'Bob': 90.0}
+{ number:number ** 3 for number in range(1,5)}
+{1: 1, 2: 8, 3: 27, 4: 64}
+```
 Functions:
 ```
 import random
